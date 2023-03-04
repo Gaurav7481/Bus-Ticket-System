@@ -12,9 +12,7 @@ USE `ticketing_system`;
 
 
 
---
--- Table structure for table `booking`
---
+
 
 CREATE TABLE `booking` (
   `id` int(100) NOT NULL,
@@ -30,9 +28,7 @@ CREATE TABLE `booking` (
   `note` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `booking`
---
+
 
 INSERT INTO `booking` (`id`, `destination_id`, `booking_date`, `journey_date`, `train_id`, `seat_numbers`, `passenger_id`, `number_of_seat`, `payment_status`, `status`, `note`) VALUES
 (1, 11, '06-10-2018', '06-10-2018', 7, '1,2', 12, 2, 'pending', 'success', 'note'),
@@ -74,9 +70,7 @@ CREATE TABLE `destinations` (
   `type` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `destinations`
---
+
 
 INSERT INTO `destinations` (`id`, `station_from`, `station_to`, `train_id`, `time`, `status`, `fare`, `last_activity`, `last_modify_by`, `total_seat`, `seat_range`, `type`) VALUES
 (11, 1, 2, 7, '40:30Am', 'active', '40', '2018-09-05 00:00:00', 0, 5, '1-5', 'up'),
@@ -94,11 +88,7 @@ INSERT INTO `destinations` (`id`, `station_from`, `station_to`, `train_id`, `tim
 (29, 7, 4, 10, '10:5AM', 'active', '900', '2018-09-05 00:00:00', 0, 2, '9-10', 'up'),
 (30, 7, 1, 8, '6AM', 'active', '480', '2018-09-05 00:00:00', 0, 2, '9-10', 'up');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `stations`
---
 
 CREATE TABLE `stations` (
   `id` int(30) NOT NULL,
@@ -107,9 +97,7 @@ CREATE TABLE `stations` (
   `contact` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `stations`
---
+
 
 INSERT INTO `stations` (`id`, `name`, `address`, `contact`) VALUES
 (1, 'Dhaka', 'Dhaka, Comlapur', '01733435951'),
@@ -119,11 +107,7 @@ INSERT INTO `stations` (`id`, `name`, `address`, `contact`) VALUES
 (6, 'Mymensingh', 'Islampur , Jamalpur, Dhaka, Bangladesh', '01733435951'),
 (7, 'Mymensingh 2', 'Islampur , Jamalpur, Dhaka, Bangladesh', '01733435951');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `trains`
---
 
 CREATE TABLE `trains` (
   `id` int(10) NOT NULL,
@@ -133,9 +117,7 @@ CREATE TABLE `trains` (
   `type` varchar(20) NOT NULL DEFAULT 'intercity'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `trains`
---
+
 
 INSERT INTO `trains` (`id`, `code`, `name`, `total_seat`, `type`) VALUES
 (2, 'B207', 'Bromoputra', 560, 'intercity'),
@@ -145,11 +127,7 @@ INSERT INTO `trains` (`id`, `code`, `name`, `total_seat`, `type`) VALUES
 (9, '106', 'Demo Bus name', 42, 'S-Chair'),
 (10, '108', 'Demo Bus name 2', 10, 'F-Class');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `users`
---
 
 CREATE TABLE `users` (
   `id` int(20) NOT NULL,
@@ -163,9 +141,7 @@ CREATE TABLE `users` (
   `last_activity` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `users`
---
+
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `password`, `rule`, `reg_date`, `last_activity`) VALUES
 (6, 'Md Rukon Shekh', 'rukon@gmail.com', '253', 'dfsdsf', '123', 'admin', '2018-09-17 15:53:29', '2018-09-17 15:53:29'),
@@ -177,13 +153,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `password`, `rul
 (12, 'Asad', 'asad@gmail.com', '01652', 'Asad Address', '123', 'passenger', '2018-09-17 16:38:28', '2018-09-17 16:38:28'),
 (13, 'boss', 'mushfiqur.office@gmail.com', '01756179081', 'dhaka', '12345', 'passenger', '2018-10-05 19:26:29', '2018-10-05 19:26:29');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `booking`
---
 ALTER TABLE `booking`
   ADD PRIMARY KEY (`id`);
 
@@ -193,15 +163,11 @@ ALTER TABLE `booking`
 ALTER TABLE `destinations`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `stations`
---
+
 ALTER TABLE `stations`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `trains`
---
+ Indexes for table `train
 ALTER TABLE `trains`
   ADD PRIMARY KEY (`id`);
 
