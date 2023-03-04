@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Nov 05, 2018 at 11:37 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -13,18 +5,12 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `ticketing_system`
---
+
 CREATE DATABASE IF NOT EXISTS `ticketing_system` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `ticketing_system`;
 
--- --------------------------------------------------------
+
 
 --
 -- Table structure for table `booking`
@@ -72,11 +58,6 @@ INSERT INTO `booking` (`id`, `destination_id`, `booking_date`, `journey_date`, `
 (23, 27, '11-10-2018', '11-10-2018', 10, '2', 12, 1, 'pending', 'success', 'note'),
 (24, 30, '11-10-2018', '11-10-2018', 8, '9', 12, 1, 'pending', 'success', 'note');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `destinations`
---
 
 CREATE TABLE `destinations` (
   `id` int(100) NOT NULL,
